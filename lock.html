@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Password</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #fce4ec;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        input {
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            margin-top: 10px;
+            background-color: #e91e63;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .error {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Enter Password</h2>
+        <input type="password" id="password-input" placeholder="Hint: First kiss">
+        <button onclick="checkPassword()">Unlock</button>
+        <p class="error" id="error-message"></p>
+    </div>
+
+    <script>
+        function checkPassword() {
+            let input = document.getElementById("password-input").value.trim().toLowerCase();
+            let errorMessage = document.getElementById("error-message");
+
+            if (input === "080823" || input === "august 8 2023") {
+                window.location.href = "valentine-confession.html"; // Redirect to letter.html
+            } else {
+                errorMessage.textContent = "Incorrect password!";
+            }
+        }
+    </script>
+
+</body>
+</html>

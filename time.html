@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forever Together</title>
+    <link rel="stylesheet" href="time.css">
+</head>
+<body>
+    <div id="backgroundContainer"> <!-- 🌟 Blue container for words -->
+        <div id="question" class="container">
+            <h2>Times Together</h2>
+            <p>Do you want to know how long we've been together?</p>
+            <button id="yesBtn">Yes</button>
+            <button id="maybeBtn">Maybe Later</button>
+        </div>
+
+        <div id="forceChoice" class="container hidden">
+            <p>Nope, you don't have a choice...</p>
+        </div>
+
+        <div id="calculating" class="container hidden">
+            <p>Calculating...</p>
+            <div class="loading-bar"></div>
+        </div>
+
+        <div id="result" class="container hidden">
+            <div id="timeCount"></div> <!-- ⏳ Red box for timer -->
+            <div id="wordsContainer" class="hidden"></div>
+            <button id="foreverBtn" class="hidden">Click for more.</button>
+        </div>
+
+        <div id="finalScreen" class="container hidden">
+            <h1>Forever to Go</h1>
+            <p>Our story continues...</p>
+            <button id="replayBtn">Replay</button>
+        </div>
+    </div> <!-- End of blue container -->
+
+    <script src="time.js"></script>
+</body>
+</html>
